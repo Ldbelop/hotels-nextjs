@@ -1,6 +1,6 @@
 import styles from './header.module.css'
-import { inter, poppins } from '@/utils/fonts'
-import InfoTab from './infoTab/infoTab'
+import { inter } from '@/utils/fonts'
+import InfoTab from '@/app/components/molecules/infoTab/infoTab.jsx'
 
 const Header = () => {
     return (
@@ -8,7 +8,7 @@ const Header = () => {
             <header className={`${styles.header} ${inter.className}`}>
                 <h1 className={styles.header__logo}>Book It!</h1>
             </header>
-            <InfoTab hotelNumber={3} place={'Latin America'} />
+            <InfoTab hotelNumber={5} place={'La pampa'} />
         </>
     )
 }
