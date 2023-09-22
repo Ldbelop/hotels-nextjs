@@ -1,0 +1,20 @@
+.actionButton{
+    padding-inline: 15px;
+    padding-block: 5px;
+    border-radius: 7px;
+    background: #525252;
+    color: #FFD990;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+}
+
+.flagship{
+    border-radius: 6px;
+    background: #FFC450;
+    color: #2E2E2E;
+    font-weight: 600;
+}

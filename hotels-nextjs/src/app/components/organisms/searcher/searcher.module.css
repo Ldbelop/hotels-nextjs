@@ -1,0 +1,35 @@
+.searcher{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../../../../public/mountain-range-sweden-bg.jpg');
+    padding-block: 25px;
+    z-index: 0;
+}
+
+.background__black{
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(44, 44, 44, 0.52);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+.twoSelect{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 2;
+    margin-top: 10px;
+}
+
+.selectsWrapper{
+    width: 279px;
+}

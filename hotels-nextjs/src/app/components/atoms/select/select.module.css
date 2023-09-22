@@ -1,0 +1,24 @@
+.selectLabel{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: min-content;
+    color: #FCFCFC;
+}
+
+.selectLabel > span{
+    padding-left: 10px;
+    font-size: 10;
+}
+
+.selectLabel > select,
+.selectLabel > input{
+    margin-top: 10px;
+    background-color: #FCFCFC;
+    width: 129px;
+    font-size: 15px;
+    border-radius: 13px;
+    border: 1px solid #676767;
+    padding-block: 10px;
+    padding-inline: 10px;
+}

@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import { useState } from 'react'
 import { poppins } from '@/utils/fonts'
 import styles from './infoText.module.css'
 
