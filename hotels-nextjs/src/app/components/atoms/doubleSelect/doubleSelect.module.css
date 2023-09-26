@@ -9,17 +9,17 @@
 }
 
 .selectLabel > span{
-    padding-left: 10px;
-    font-size: 10;
+    padding-left: 13px;
+    font-size: 10px;
 }
 
 .selectLabel > select{
     margin-top: 10px;
     background-color: #FCFCFC;
     width: 279px;
-    font-size: 15px;
-    border-radius: 13px;
-    border: 1px solid #676767;
-    padding-block: 10px;
+    font-size: 12px;
+    border-radius: 8px;
+    border: none;
+    padding-block: 8px;
     padding-inline: 10px;
 }

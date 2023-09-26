@@ -25,9 +25,9 @@ const MainCards = () => {
         }
     },[])
     return (
-        <div>
+        <section>
             {cardList.map((card, index) => <Card key={`${index}${card.slug}`} cardData={card}/>)}
-        </div>
+        </section>
     )
 }
 
