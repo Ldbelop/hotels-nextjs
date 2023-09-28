@@ -1,7 +1,7 @@
 import InfoText from '@/app/components/atoms/infoText/infoText.jsx'
 import InfoNoHotels from '@/app/components/atoms/infoNoHotels/infoNoHotels.jsx'
 import styles from './infoTab.module.css'
-import { useHotelsFilterContext } from '@/app/page'
+import { useHotelsFilterContext } from '@/app/components/templates/pageTemplate'
 
 const InfoTab = () => {
   const { hotelNumber, hotelPlace } = useHotelsFilterContext();

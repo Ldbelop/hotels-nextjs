@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import Card from '@/app/components/molecules/card/card.jsx'
 import styles from './mainCards.module.css'
-import { useHotelsFilterContext } from "@/app/page"
+import { useHotelsFilterContext } from '@/app/components/templates/pageTemplate'
 import filterService from '@/app/services/filterService'
 
 const fetchData = async (API_URL) => {
