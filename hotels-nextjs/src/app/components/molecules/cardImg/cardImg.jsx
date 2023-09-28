@@ -4,7 +4,7 @@ import { inter, poppins } from '@/utils/fonts'
 
 const CardImg = ( { imgSrc, imgAlt, descText, country } ) => {
   return (
-    <div className={styles.card}>
+    <div className={styles.imgContainer}>
       <img className={styles.card__img} src={imgSrc} alt={ imgAlt } />
       <p className={`${styles.card__text} ${inter.className}`}>{descText}</p>
       <CardCountry country={country}/>

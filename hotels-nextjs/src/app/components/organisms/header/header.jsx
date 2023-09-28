@@ -8,7 +8,7 @@ const Header = () => {
             <header className={`${styles.header} ${inter.className}`}>
                 <h1 className={styles.header__logo}>Book It!</h1>
             </header>
-            <InfoTab hotelNumber={5} place={'La pampa'} />
+            <InfoTab />
         </>
     )
 }

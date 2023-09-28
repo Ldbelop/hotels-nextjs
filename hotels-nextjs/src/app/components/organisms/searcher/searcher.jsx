@@ -2,37 +2,42 @@ import DoubleSelect from "../../atoms/doubleSelect/doubleSelect"
 import Select from "@/app/components/atoms/select/select.jsx"
 import ActionButton from "@/app/components/atoms/actionButton/actionButton.jsx"
 import styles from "./searcher.module.css"
+import { useHotelsFilterContext } from "@/app/page"
 
 const Searcher = () => {
-  return (
-    <section className={styles.searcher}>
-        <div className={styles.background__black}></div>
-        <DoubleSelect 
-        label={'Where'} 
-        id={'whereSelect'}
-        options={
-            [
-                'All Countries',
-                'Argentina',
-                'Brazil',
-                'Chile',
-                'Uruguay'
-            ]
-        }
-        />
-        <div className={styles.selectsWrapper}>
-            <div className={styles.twoSelect}>
-                <Select label={'From'} type={'date'}/>
-                <Select label={'To'} type={'date'}/>
+    const { setHotelPlace, setHotelFromDate, setHotelToDate, setHotelPrice, setHotelSize} = useHotelsFilterContext();
+
+    return (
+        <section className={styles.searcher}>
+            <div className={styles.background__black}></div>
+            <DoubleSelect 
+            label={'Where'} 
+            id={'whereSelect'}
+            options={
+                [
+                    'All Countries',
+                    'Argentina',
+                    'Brasil',
+                    'Chile',
+                    'Uruguay'
+                ]
+            }
+            setter={setHotelPlace}
+            setterType={'place'}
+            />
+            <div className={styles.selectsWrapper}>
+                <div className={styles.twoSelect}>
+                    <Select label={'From'} type={'date'} setter={setHotelFromDate} setterType={'fromDate'}/>
+                    <Select label={'To'} type={'date'} setter={setHotelToDate} setterType={'toDate'}/>
+                </div>
+                <div className={styles.twoSelect}>
+                    <Select label={'Price'} options={['All Prices', '1', '2', '3', '4']} setter={setHotelPrice} setterType={'price'}/>
+                    <Select label={'Bedroom Size'} options={['All Sizes', 'Small', 'Medium', 'Large']} setter={setHotelSize} setterType={'size'}/>
+                </div>
             </div>
-            <div className={styles.twoSelect}>
-                <Select label={'Price'} options={['All Prices', '$', '$$', '$$$', '$$$$']}/>
-                <Select label={'Bedroom Size'} options={['All Sizes', 'Small', 'Medium', 'Large']}/>
-            </div>
-        </div>
-        <ActionButton />
-    </section>
-  )
+            <ActionButton />
+        </section>
+    )
 }
 
 export default Searcher
