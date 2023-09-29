@@ -2,12 +2,12 @@
     position: relative;
     overflow: hidden;
     border-radius: 12px; 
-    width: min-content;
-    height: min-content;
+    width: 100%;
+    height: auto;
 }
 
 .card__img{
-    max-width: 300px;
+    max-width: 100%;
     height: auto;
 }
 
