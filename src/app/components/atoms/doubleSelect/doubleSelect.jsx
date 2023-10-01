@@ -1,7 +1,7 @@
 import { inter, poppins } from "@/utils/fonts";
 import styles from './doubleSelect.module.css'
 
-const DoubleSelect = ({ label, options, setter, setterType }) => {
+const DoubleSelect = ({ label, options, setter, setterType, controlledValue }) => {
   const optionList = options.map((option, index) => {
     return <option key={`${option}${index}`} value={option}>{option}</option>
   });
@@ -18,7 +18,7 @@ const DoubleSelect = ({ label, options, setter, setterType }) => {
         <span>
             {label}
         </span>
-        <select name="searcher" className={inter.className} onChange={handleChange}>
+        <select name="searcher" value={controlledValue.value} className={inter.className} onChange={handleChange}>
             {optionList}
         </select>
     </label>

@@ -9,10 +9,10 @@ const HotelsFilterContext = createContext(null);
 const PageTemplate = () => {
     const [hotelNumber, setHotelNumber] = useState(0)
     const [hotelPlace, setHotelPlace] = useState({value: "All Countries", type: "place"});
-    const [hotelFromDate, setHotelFromDate] = useState(null)
-    const [hotelToDate, setHotelToDate] = useState(null)
-    const [hotelPrice, setHotelPrice] = useState("All Prices")
-    const [hotelSize, setHotelSize] = useState("All Sizes")
+    const [hotelFromDate, setHotelFromDate] = useState({value: "", type: "fromDate"})
+    const [hotelToDate, setHotelToDate] = useState({value: "", type: "toDate"})
+    const [hotelPrice, setHotelPrice] = useState({value: "All Prices", type: "price"})
+    const [hotelSize, setHotelSize] = useState({value: "All Sizes", type: "size"})
     const [filterList, setFilterList] = useState([])
   
   

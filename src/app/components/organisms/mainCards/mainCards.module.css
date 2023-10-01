@@ -1,7 +1,7 @@
 .cardsSection{
     padding-inline: 20px;
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
     row-gap: 40px;
     column-gap: 20px;
     grid-auto-rows: auto;

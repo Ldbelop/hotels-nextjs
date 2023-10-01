@@ -15,13 +15,20 @@ const filterHotels = (hotelArray, filterArray) => {
                     break;
                 
                 case 'fromDate':
-                    console.log((Date.parse(filter.value)/1000.0))
-                    hotelArray = hotelArray.filter((hotel) => hotel.availabilityFrom <= (Date.parse(filter.value)/1000.0))
-                    break;
+                    if(filter.value == ""){
+                        break
+                    }{
+                        hotelArray = hotelArray.filter((hotel) => hotel.availabilityFrom <= (Date.parse(filter.value)/1000.0))
+                        break;
+                    }
                 
                 case 'toDate':
-                    hotelArray = hotelArray.filter((hotel) => hotel.availabilityTo >= (Date.parse(filter.value)/1000.0))
-                    break;
+                    if(filter.value == ""){
+                        break
+                    }{
+                        hotelArray = hotelArray.filter((hotel) => hotel.availabilityTo >= (Date.parse(filter.value)/1000.0))
+                        break;
+                    }
                 
                 case 'size':
                     switch(filter.value){
@@ -45,24 +52,19 @@ const filterHotels = (hotelArray, filterArray) => {
 const addFilter = (filterArray, newFilter) => {
     console.log(filterArray)
     if(newFilter != null){
-        console.log(newFilter)
-        if(newFilter.value == ""){
-            return [...filterArray]
-        }else{
-            let filterCoincidenceIndex;
-            const filterCoincidence = filterArray.find((filter, index) => {
-                filterCoincidenceIndex = index;
-                return filter.type == newFilter.type
-            })
-            if(filterCoincidence == undefined){
-                console.log(newFilter)
-                filterArray.push(newFilter)
-            } else{
-                console.log(newFilter)
-                filterArray[filterCoincidenceIndex] = newFilter;
-            }
-            return [...filterArray]
+        let filterCoincidenceIndex;
+        const filterCoincidence = filterArray.find((filter, index) => {
+            filterCoincidenceIndex = index;
+            return filter.type == newFilter.type
+        })
+        if(filterCoincidence == undefined){
+            console.log(newFilter)
+            filterArray.push(newFilter)
+        } else{
+            console.log(newFilter)
+            filterArray[filterCoincidenceIndex] = newFilter;
         }
+        return [...filterArray]
     } else{
         return [...filterArray]
     }

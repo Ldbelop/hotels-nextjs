@@ -5,7 +5,7 @@ import styles from "./searcher.module.css"
 import { useHotelsFilterContext } from '@/app/components/templates/pageTemplate'
 
 const Searcher = () => {
-    const { setHotelPlace, setHotelFromDate, setHotelToDate, setHotelPrice, setHotelSize} = useHotelsFilterContext();
+    const { setHotelPlace, hotelPlace, setHotelFromDate, hotelFromDate, setHotelToDate, hotelToDate, setHotelPrice, hotelPrice, setHotelSize, hotelSize} = useHotelsFilterContext();
 
     return (
         <section className={styles.searcher}>
@@ -24,18 +24,19 @@ const Searcher = () => {
             }
             setter={setHotelPlace}
             setterType={'place'}
+            controlledValue={hotelPlace}
             />
             <div className={styles.selectsWrapper}>
                 <div className={styles.twoSelect}>
-                    <Select label={'From'} type={'date'} setter={setHotelFromDate} setterType={'fromDate'}/>
-                    <Select label={'To'} type={'date'} setter={setHotelToDate} setterType={'toDate'}/>
+                    <Select label={'From'} type={'date'} setter={setHotelFromDate} setterType={'fromDate'} controlledValue={hotelFromDate}/>
+                    <Select label={'To'} type={'date'} setter={setHotelToDate} setterType={'toDate'} controlledValue={hotelToDate}/>
                 </div>
                 <div className={styles.twoSelect}>
-                    <Select label={'Price'} options={['All Prices', '1', '2', '3', '4']} setter={setHotelPrice} setterType={'price'}/>
-                    <Select label={'Bedroom Size'} options={['All Sizes', 'Small', 'Medium', 'Large']} setter={setHotelSize} setterType={'size'}/>
+                    <Select label={'Price'} options={['All Prices', '1', '2', '3', '4']} setter={setHotelPrice} setterType={'price'} controlledValue={hotelPrice}/>
+                    <Select label={'Bedroom Size'} options={['All Sizes', 'Small', 'Medium', 'Large']} setter={setHotelSize} setterType={'size'} controlledValue={hotelSize}/>
                 </div>
             </div>
-            <ActionButton />
+            <ActionButton setterArray={[setHotelPlace, setHotelFromDate, setHotelToDate, setHotelPrice, setHotelSize]}/>
         </section>
     )
 }
