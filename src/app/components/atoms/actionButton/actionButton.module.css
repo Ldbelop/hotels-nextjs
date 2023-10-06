@@ -3,8 +3,8 @@
     justify-content: center;
     padding-block: 5px;
     border-radius: 7px;
-    background-color: #525252;
-    color: #FFD990;
+    background-color: #3a3a3a;
+    color: #ffc75b;
     font-size: 10px;
     font-weight: 500;
     border: none;
@@ -13,11 +13,8 @@
     margin-top: 20px;
     cursor: pointer;
     width: 58px;
-    transition: width 0.5s ease-in !important;
-    -moz-transition: width 0.5s ease-in !important;
-    -webkit-transition: width 0.5s ease-in !important;
-    -o-transition: width 0.5s ease-in !important;
-    -ms-transition: width 0.5s ease-in !important;
+    transition-property: width !important;
+    transition-duration: 300ms !important;
 }
 
 .flagship{
@@ -29,9 +26,6 @@
     width: 68px;
 }
 
-.actionButton.cleared{
-    color: #525252;
-    background-color: #FFD990;
-    width: 76px;
+.cleared{
+    width: 76px
 }
-

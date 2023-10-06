@@ -21,6 +21,18 @@ const ActionButton = ( { flagship, setterArray } ) => {
     const buttonRef = useRef(null)
 
     useEffect(() => {
+      const clickHandler = () => {
+        setterArray.forEach((setter, index) => {
+          setter(clearedValues[index])
+        })
+        setButtonClassName(`${poppins.className} ${styles.actionButton} ${styles.cleared}`)
+        setButtonText("Cleared!")
+        setTimeout(() => {
+          setButtonClassName(`${poppins.className} ${styles.actionButton}`)
+          setButtonText("Clear")
+        }, 2000)
+      }
+      
       if(buttonRef && buttonRef.current){
         buttonRef.current.addEventListener("click", clickHandler);
       }
@@ -30,18 +42,6 @@ const ActionButton = ( { flagship, setterArray } ) => {
         }
       }
     }, [buttonRef])
-
-    const clickHandler = () => {
-      setterArray.forEach((setter, index) => {
-        setter(clearedValues[index])
-      })
-      setButtonText("Cleared!")
-      setButtonClassName(`${poppins.className} ${styles.actionButton} ${styles.cleared}`)
-      setTimeout(() => {
-        setButtonText("Clear")
-        setButtonClassName(`${poppins.className} ${styles.actionButton}`)
-      }, 2000)
-    }
 
     const button = flagship == true ? (
       <button className={buttonClassName}>
