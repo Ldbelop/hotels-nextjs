@@ -23,3 +23,7 @@
     padding-block: 8px;
     padding-inline: 10px;
 }
+
+.selecLabel > select:focus{
+    outline: none;
+}

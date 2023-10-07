@@ -3,6 +3,7 @@ import Header from '@/app/components/organisms/header/header.jsx'
 import Searcher from '@/app/components/organisms/searcher/searcher.jsx'
 import MainCards from '@/app/components/organisms/mainCards/mainCards.jsx'
 import { createContext, useContext, useState } from 'react'
+import InfoTab from '@/app/components/molecules/infoTab/infoTab.jsx'
 const HotelsFilterContext = createContext(null);
 
 
@@ -37,7 +38,9 @@ const PageTemplate = () => {
               setFilterList
             }
           }>
-          <Header />
+          <Header>
+            <InfoTab />
+          </Header>
           <main>
             <Searcher />
             <MainCards />

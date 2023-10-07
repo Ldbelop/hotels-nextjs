@@ -22,3 +22,8 @@
     padding-block: 8px;
     padding-inline: 10px;
 }
+
+.selectLabel > select:focus,
+.selectLabel > input:focus{
+    outline: none;
+}
