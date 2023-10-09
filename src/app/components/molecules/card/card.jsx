@@ -2,7 +2,7 @@ import CardImg from '@/app/components/molecules/cardImg/cardImg.jsx'
 import CardInfo from '@/app/components/molecules/cardInfo/cardInfo.jsx'
 import styles from './card.module.css'
 
-const Card = ({ cardData }) => {
+const Card = ({ cardData, flagship, reserve}) => {
   return (
     <div className={styles.card}>
         <CardImg 
@@ -11,7 +11,7 @@ const Card = ({ cardData }) => {
             descText={cardData.description}
             country={cardData.country}
         />
-        <CardInfo hotelName={cardData.name} hotelInfo={{price: cardData.price, rooms: cardData.rooms}}/>
+        <CardInfo hotelName={cardData.name} hotelInfo={{price: cardData.price, rooms: cardData.rooms}} flagship={flagship} reserve={reserve} cardData={cardData}/>
     </div>
   )
 }

@@ -1,8 +1,9 @@
+'use client'
 import DoubleSelect from "../../atoms/doubleSelect/doubleSelect"
 import Select from "@/app/components/atoms/select/select.jsx"
 import ActionButton from "@/app/components/atoms/actionButton/actionButton.jsx"
 import styles from "./searcher.module.css"
-import { useHotelsFilterContext } from '@/app/components/templates/pageTemplate'
+import { useHotelsFilterContext } from '@/app/components/providers/HotelsFilterProvider.jsx'
 
 const Searcher = () => {
     const { setHotelPlace, hotelPlace, setHotelFromDate, hotelFromDate, setHotelToDate, hotelToDate, setHotelPrice, hotelPrice, setHotelSize, hotelSize} = useHotelsFilterContext();

@@ -1,5 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import ReservesProvider from '@/app/components/providers/ReservesProvider'
+import HotelsFilterProvider from './components/providers/HotelsFilterProvider'
 
 export const metadata: Metadata = {
   title: 'Book It!',
@@ -14,7 +16,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <HotelsFilterProvider>
+          <ReservesProvider>
+            {children}
+          </ReservesProvider>
+        </HotelsFilterProvider>
       </body>
     </html>
   )

@@ -14,7 +14,15 @@
     cursor: pointer;
     width: 58px;
     transition-property: width !important;
-    transition-duration: 300ms !important;
+    transition-duration: 200ms !important;
+    -webkit-transition-property: width !important;
+    -webkit-transition-duration: 200ms !important;
+    -moz-transition-property: width !important;
+    -moz-transition-duration: 200ms !important;
+    -ms-transition-property: width !important;
+    -ms-transition-duration: 200ms !important;
+    -o-transition-property: width !important;
+    -o-transition-duration: 200ms !important;
 }
 
 .flagship{
@@ -28,4 +36,11 @@
 
 .cleared{
     width: 76px
+}
+
+.reserve{
+    width: 68px;
+    background-color: #300;
+    margin-top: 0;
+
 }
